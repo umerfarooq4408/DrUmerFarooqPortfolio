@@ -27,20 +27,25 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
 
-    const initials = 'UF'
+    const profileSrc = `${import.meta.env.BASE_URL}profile.png`
 
     return (
         <header
             className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled
-                    ? 'bg-paper/85 dark:bg-dark/85 backdrop-blur-xl shadow-lg shadow-navy/5 border-b border-navy/10 dark:border-dark-border/60'
-                    : 'bg-transparent'
+                ? 'bg-paper/85 dark:bg-dark/85 backdrop-blur-xl shadow-lg shadow-navy/5 border-b border-navy/10 dark:border-dark-border/60'
+                : 'bg-transparent'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between">
                 <a href="#home" className="flex items-center gap-3 group">
-                    <span className="relative w-11 h-11 flex items-center justify-center rounded-xl bg-gradient-to-br from-navy to-royal text-paper font-display font-bold text-lg shadow-lg shadow-royal/30 ring-2 ring-gold/60">
-                        {initials}
-                        <span className="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-gold ring-2 ring-paper dark:ring-dark" />
+                    <span className="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-br from-gold via-royal to-navy shadow-lg shadow-royal/30 transition-transform duration-300 group-hover:scale-105">
+                        <img
+                            src={profileSrc}
+                            alt="Dr. Umer Farooq"
+                            className="w-full h-full rounded-full object-cover ring-2 ring-paper dark:ring-dark"
+                            loading="eager"
+                        />
+                        <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-gold ring-2 ring-paper dark:ring-dark" />
                     </span>
                     <span className="hidden sm:flex flex-col leading-tight">
                         <span className="font-display font-bold text-navy dark:text-paper text-sm">Dr. Umer Farooq</span>
@@ -54,8 +59,8 @@ export default function Navbar() {
                             key={link.id}
                             href={`#${link.id}`}
                             className={`relative px-3.5 py-2 text-sm font-medium rounded-lg transition-colors ${active === link.id
-                                    ? 'text-royal dark:text-gold'
-                                    : 'text-navy/70 dark:text-gray-300 hover:text-royal dark:hover:text-gold'
+                                ? 'text-royal dark:text-gold'
+                                : 'text-navy/70 dark:text-gray-300 hover:text-royal dark:hover:text-gold'
                                 }`}
                         >
                             {link.label}
@@ -111,8 +116,8 @@ export default function Navbar() {
                                     href={`#${link.id}`}
                                     onClick={() => setOpen(false)}
                                     className={`px-4 py-3 rounded-lg text-sm font-medium ${active === link.id
-                                            ? 'bg-royal/10 dark:bg-gold/15 text-royal dark:text-gold'
-                                            : 'text-navy/80 dark:text-gray-200'
+                                        ? 'bg-royal/10 dark:bg-gold/15 text-royal dark:text-gold'
+                                        : 'text-navy/80 dark:text-gray-200'
                                         }`}
                                 >
                                     {link.label}
