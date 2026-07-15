@@ -24,7 +24,7 @@ export const summary = `Highly accomplished academic professional with a PhD in 
 
 export const stats = [
     { label: 'Publications', value: 22, suffix: '+' },
-    { label: 'Years Teaching', value: 10, suffix: '+' },
+    { label: 'Years Teaching', value: 15, suffix: '+' },
     { label: 'MS Theses Supervised', value: 3, suffix: '' },
     { label: 'Academic Level', value: 'PhD', suffix: '', isText: true },
 ]
