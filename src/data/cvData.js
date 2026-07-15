@@ -20,7 +20,7 @@ export const personal = {
     cvFile: 'Dr_Umer_Farooq_CV.pdf',
 }
 
-export const summary = `Highly accomplished academic professional with a PhD in Computer Science and over 10 years of experience in teaching and mentoring students at the university level. Adept at developing and delivering comprehensive curricula that meet the needs of diverse student populations. Proven ability to engage students through innovative teaching methods and to inspire a passion for learning in the field of computer science. Demonstrates a strong commitment to academic excellence, continuous professional development, and fostering a collaborative learning environment. Skilled in research, curriculum design, and the application of cutting-edge educational technologies.`
+export const summary = `Highly accomplished academic professional with a PhD in Computer Science and over 15 years of experience in teaching and mentoring students at the university level. Adept at developing and delivering comprehensive curricula that meet the needs of diverse student populations. Proven ability to engage students through innovative teaching methods and to inspire a passion for learning in the field of computer science. Demonstrates a strong commitment to academic excellence, continuous professional development, and fostering a collaborative learning environment. Skilled in research, curriculum design, and the application of cutting-edge educational technologies.`
 
 export const stats = [
     { label: 'Publications', value: 22, suffix: '+' },
